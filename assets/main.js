@@ -8,7 +8,9 @@
 (function($){
 	
 	'use strict';
-	alert("Sample Alert!");
+	$(window).ready(function(){
+		alert("Sample Alert!");
+	});
 
 })(jQuery);
 
