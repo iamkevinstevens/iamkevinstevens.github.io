@@ -8,9 +8,18 @@
 (function($){
 	
 	'use strict';
-	$(window).ready(function(){
-		alert("Sample Alert!");
-	});
+
+	$('.page-link').click(function() {
+		var anchor = $(this).attr("dest");
+		// $('.link-wrap').removeClass('visible');
+
+		// $('nav span').removeClass('active');
+		// $("nav").find('[dest="'+ anchor +'"]').addClass('active');
+
+		$('html, body').animate({
+		  scrollTop: $('#' + anchor).offset().top
+		}, 600);
+  	});
 
 })(jQuery);
 

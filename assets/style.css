@@ -5,21 +5,66 @@
 * Purpose: [Stylesheet]
 */
 
-body h1 {
-	color: orange;
-	font-size: 56px;
+body {
+	background: #fff;
+	color: #2C3E50;
+	font: 400 12px/12px 'Roboto Slab';
 }
-
+body h1 {
+	font-size: 35px;
+}
+body h2 {
+	text-align: center;
+}
 .full-screen-panel {
 	height: 100vh;
+	padding: 10vh 0 20px 0;
 }
-
 .flexed-center {
 	display: flex;
 	justify-content: center;
+	align-items: top;
+}
+.home-box {
+	height: 75vh;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-around;
 	align-items: center;
+}
+.home-box h1{
+	display: flex;
+	align-items: center;
+}
+img.home-center-img {
+	width: auto;
+	height: auto;
+	max-width: 200px;
+	max-height: 200px;
+	border-radius: 100%;
+	box-shadow: 0px 5px 15px #987676;
+}
+.navigation {
+	width: 75%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	margin: 0;
+}
+.navigation .page-link{
+	margin: 0 10px;
 }
 
 .orange-bg {
 	background: orange;
+}
+.green-bg {
+	background: green;
+}
+.gray-bg {
+	background: gray;
+}
+.grayish-bg {
+	background: #FAFAFA;
 }
