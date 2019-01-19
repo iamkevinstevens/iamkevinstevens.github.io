@@ -3,3 +3,17 @@ body h1 {
 	color: orange;
 	font-size: 56px;
 }
+
+.full-screen-panel {
+	height: 100vh;
+}
+
+.flexed-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.orange-bg {
+	background: orange;
+}
