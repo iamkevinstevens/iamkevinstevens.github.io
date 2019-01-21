@@ -8,43 +8,18 @@
 body {
 	background: #fff;
 	color: #2C3E50;
-	font: 400 12px/12px 'Roboto Slab';
+	font: 400 12px/12px 'Aleo';
 }
-body h1 {
-	font-size: 35px;
+body p, a, li, span{
+	font: 400 17px/120% 'Aleo';
 }
 body h2 {
 	text-align: center;
-}
-.full-screen-panel {
-	height: 100vh;
-	padding: 10vh 0 20px 0;
-}
-.flexed-center {
-	display: flex;
-	justify-content: center;
-	align-items: top;
-}
-.home-box {
-	height: 75vh;
-	display: flex;
-	flex-flow: column;
-	justify-content: space-around;
-	align-items: center;
-}
-.home-box h1{
-	display: flex;
-	align-items: center;
-}
-img.home-center-img {
-	width: auto;
-	height: auto;
-	max-width: 200px;
-	max-height: 200px;
-	border-radius: 100%;
-	box-shadow: 0px 5px 15px #987676;
+	font: 700 35px/100% 'Aleo';
+	color: #2C3E50;
 }
 .navigation {
+	display: none !important;
 	width: 75%;
 	display: flex;
 	align-items: center;
@@ -55,9 +30,170 @@ img.home-center-img {
 .navigation .page-link{
 	margin: 0 10px;
 }
+.hrclass {
+	width: 70px;
+    height: 4px;
+    margin: 25px auto 90px auto;
+    background: orange;
+}
+.smallhrclass {
+	width: 50px;
+    height: 4px;
+    margin: 10px auto 25px auto;
+    background: orange;	
+}
+.small-heading {
+	font: 700 25px/120% 'Aleo';
+	text-align: center;
+}
+@media only screen and (max-width: 768px) {
+	.hrclass {
+    	margin: 25px auto 50px auto;
+	}
+}
+.full-screen-panel {
+	min-height: 100vh;
+	padding: 10vh 0 20px 0;
+}
+.flexed-center {
+	display: flex;
+	justify-content: center;
+	align-items: top;
+}
+.home-slide {
+	background: gray url("images/geometry2.png") repeat 0 0;
+	width: 100%;
+	margin: 0;
+	text-align: center;
+	box-sizing: border-box;
+	-webkit-animation: slide 20s linear infinite;	
+}
+@-webkit-keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: -400px 0; }
+}
+.home-box {
+	margin: 70px 0 0 0;
+}
+h1.mainh1class{
+	text-align: left;
+    font-size: 20px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+}
+h1.mainh1class a{
+	color: inherit;
+}
+.home-box p{
+	text-align: center;
+	font: 700 40px/120% 'Aleo';
+	color: #000;
+}
+img.home-center-img {
+	width: auto;
+	height: auto;
+	max-width: 150px;
+    max-height: 150px;
+	border-radius: 100%;
+}
+#sl-about .about-image {
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+#sl-about .about-image img{
+	margin-bottom: 25px;
+}
+#sl-about {
+	padding-bottom: 0 0 50px 0;
+}
+#sl-about p.about-foreword{
+	margin: 0 0 120px 0;
+	font: 400 45px/120% 'Aleo';
+	text-align: center;
+	/*animation: slideFromLeft .75s ease both;
+	position: relative;*/
+}
+@keyframes slideFromLeft {
+  from { 
+  	right: 200px;
+  	opacity: 0; 
+  }
+  to { 
+  	right: 0px;
+  	opacity: 1; 
+  }
+}
+@keyframes slideFromRight {
+  from { 
+  	left: 200px;
+  	opacity: 0; 
+  }
+  to { 
+  	left: 0px;
+  	opacity: 1; 
+  }
+}
+
+#sl-about .about-enclosure{ 
+	margin: 50px 0;
+}
+.skills-and-tech {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center; 
+}
+.skills-and-tech .skill{
+	border-radius: 5px;
+	margin: 0 15px 25px 15px; 
+	height: 100px;
+	width: 100px;
+	font-size: 40px;
+	text-align: center;
+    position: relative;
+    display: inline-block;
+}
+.skills-and-tech .skill .hexa{
+    background-color: #fff;
+    height: 100%;
+    width: calc(100% * 0.57735);
+    display: inline-block;
+}
+.skills-and-tech .skill .hexa i{
+	position: absolute;
+	top: 30px;
+	left: 0;
+	right: 0;
+	z-index: 2;
+}
+.skills-and-tech .skill .hexa:before{
+	position: absolute;
+	top: 0;
+	right: calc((100% / 2) - ((100% * 0.57735) / 2));
+	background-color: inherit;
+	height: inherit;
+	width: inherit;
+	content: '';
+	transform: rotateZ(60deg);
+	z-index: 1;
+}
+.skills-and-tech .skill .hexa:after{
+	position: absolute;
+	top: 0;
+	right: calc((100% / 2) - ((100% * 0.57735) / 2));
+	background-color: inherit;
+	height: inherit;
+	width: inherit;
+	content: '';
+	transform: rotateZ(-60deg);
+}
 
 .orange-bg {
-	background: orange;
+	background: #ffca00;
 }
 .green-bg {
 	background: green;
