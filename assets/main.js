@@ -26,6 +26,8 @@
 		console.log(scroll);
 	});
   	
+  	// Simple Bootstrap Tooltip
+	$('[data-toggle="tooltip"]').tooltip()  
 
 })(jQuery);
 
