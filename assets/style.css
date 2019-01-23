@@ -42,16 +42,18 @@ body h2 {
 	border-top-color: #2C3E50 !important;
  }
 .navigation {
-	display: none !important;
-	width: 75%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 0;
-	margin: 0;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 50px;
 }
-.navigation .page-link{
-	margin: 0 10px;
+.navigation .nav-links{
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-start;
 }
 .hrclass {
 	width: 70px;
@@ -138,8 +140,6 @@ img.home-center-img {
 	margin: 0 0 120px 0;
 	font: 400 45px/120% 'Aleo';
 	text-align: center;
-	/*animation: slideFromLeft .75s ease both;
-	position: relative;*/
 }
 @keyframes slideFromLeft {
   from { 
@@ -166,6 +166,9 @@ img.home-center-img {
 	margin: 50px 0;
 }
 .techno {
+	width: 100%;
+	max-width: 888px;
+	margin: 0 auto;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center; 
@@ -179,6 +182,7 @@ img.home-center-img {
 	text-align: center;
     position: relative;
     display: inline-block;
+	position: relative;
 }
 .techno .techspec .hexa{
     background-color: #fff;
@@ -247,6 +251,12 @@ img.home-center-img {
 	justify-content: center;
 
 	position: relative;
+}
+@media only screen and (max-width: 550px) {
+	.skills .skill{
+		width: 150px;
+		height: 150px;
+	}
 }
 .skills .skill .skill-image {
 	width: 100%;

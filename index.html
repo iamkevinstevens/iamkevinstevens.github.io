@@ -16,15 +16,28 @@
 
 		<!-- Custom Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="assets/style.css">
-		<title>iamkevinstevens | GitHub</title>
+		<title>iamkevinstevens | GitHub IO</title>
 	</head>
 	<body class="grayish-bg">
 		<header>
-			
+			<div class="navigation">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="nav-links">
+								<div class="page-link" dest='sl-home'><span>HOME</span></div>
+								<div class="page-link" dest='sl-about'><span>ABOUT</span></div>
+								<div class="page-link" dest='sl-proj'><span>PROJECT</span></div>
+								<div class="page-link" dest='sl-follow'><span>FOLLOW</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</header>
 
 		<!-- ||||||||||||||||||||||||||||||| -->
-			<div class="home-slide full-screen-panel" dest="sl-home">
+			<div class="home-slide full-screen-panel" id="sl-home">
 				<div class="container">
 					<div class="col-md-12">
 						<h1 class="mainh1class">
@@ -61,11 +74,6 @@
 									I'm Kevin Stevens.<br>
 									Front-end Web Developer from the Philippines<br>
 								</p>
-								<div class="navigation">
-									<div class="page-link" dest='sl-about'>About</div>
-									<div class="page-link" dest='sl-proj'>Projects</div>
-									<div class="page-link" dest='sl-follow'>Follow Me</div>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -81,7 +89,7 @@
 							<div class="about-image">
 								<img class="home-center-img" src="assets/images/mug.jpg" alt="mug.jpg">
 							</div>
-							<p class="about-foreword">"Someone who strives hard to make things easier for others. That's the role I want to fulfill."
+							<p class="about-foreword">"In this industry, there is a role for anyone who partakes. But the best role anyone could aim for, is the one that strives to make things easier for others."
 								<br><span><i>Kevin Stevens</i></span>
 							</p>
 						</div>
@@ -178,7 +186,7 @@
 						<div class="col-md-12">
 							<div class="about-enclosure">
 								<p class="small-heading">
-									Technologies
+									Tools I Use
 								</p>
 								<div class="smallhrclass"></div>
 								<div class="techno">
@@ -220,29 +228,41 @@
 										</div>
 									</div>
 									<div class="techspec">
+										<div class="hexa tr" data-toggle="tooltip" data-placement="bottom" title="WooCommerce">
+											<div class="hexa-img-holder">
+												<img src="assets/images/woo.png" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="techspec">
 										<div class="hexa tr" data-toggle="tooltip" data-placement="bottom" title="Photoshop">
 											<div class="hexa-img-holder">
 												<img src="assets/images/photoshop.png" alt="">
 											</div>
 										</div>
 									</div>
+									<div class="techspec">
+										<div class="hexa tr" data-toggle="tooltip" data-placement="bottom" title="Git">
+											<i class="fab fa-git"></i>
+										</div>
+									</div>
+									<div class="techspec">
+										<div class="hexa tr" data-toggle="tooltip" data-placement="bottom" title="Sublime Text 3">
+											<div class="hexa-img-holder">
+												<img src="assets/images/st3logo.png" alt="">
+											</div>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-						<div class="col-md-12">
-							<div class="about-enclosure">
-								<p class="small-heading">
-									My Choice Tools
-								</p>
-								<div class="smallhrclass"></div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<div class="full-screen-panel green-bg" id="sl-proj">
+			<div class="full-screen-panel" id="sl-proj">
 				<h2>PROJECTS</h2>
+				<div class="hrclass"></div>
 			</div>
 
 			<div class="full-screen-panel gray-bg" id="sl-follow">
