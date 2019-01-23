@@ -24,6 +24,12 @@ body h2 {
 	-o-transition: all 0.3s ease-out;
 	transition: all 0.3s ease-out;
 }
+.tr-25 {
+	-webkit-transition: all 0.25s ease-out;
+	-moz-transition: all 0.25s ease-out;
+	-o-transition: all 0.25s ease-out;
+	transition: all 0.25s ease-out;
+}
 .dflex-center {
 	display: flex;
 	justify-content: center;
@@ -44,7 +50,7 @@ body h2 {
 .navigation {
 	position: fixed;
 	z-index: 999;
-	top: 0;
+	top: -50px;
 	left: 0;
 	right: 0;
 	height: 50px;
@@ -141,26 +147,11 @@ img.home-center-img {
 	font: 400 45px/120% 'Aleo';
 	text-align: center;
 }
-@keyframes slideFromLeft {
-  from { 
-  	right: 200px;
-  	opacity: 0; 
-  }
-  to { 
-  	right: 0px;
-  	opacity: 1; 
-  }
-}
-@keyframes slideFromRight {
-  from { 
-  	left: 200px;
-  	opacity: 0; 
-  }
-  to { 
-  	left: 0px;
-  	opacity: 1; 
-  }
-}
+
+
+
+
+
 
 #sl-about .about-enclosure{ 
 	margin: 50px 0;
@@ -279,18 +270,16 @@ img.home-center-img {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	opacity: 0;
-}
-.skills .skill:hover .skill-box {
-	opacity: 1;
 }
 .skills .skill .skill-box .inner{
 	background: rgba(255,255,255,0.95);
-	border: 2px solid orange;
+	border: 1px solid orange;
 	width: 90%;
 	height: 90%;
 	border-radius: 10px;
+	opacity: 0;
 }
+
 .skills .skill .skill-box .inner span {
 	width: 90%;
 	margin: 0 auto;
@@ -298,19 +287,9 @@ img.home-center-img {
 	text-align: center;
 	font-weight: 900;
 }
-.skills .skill .skill-box .inner span:before{
-	width: 20px;
-    height: 4px;
-    margin: 0 auto;
-    background: orange;
+.skills .skill .skill-box:hover .inner{
+	opacity: 1;
 }
-.skills .skill .skill-box .inner span:after{
-	width: 20px;
-    height: 4px;
-    margin: 0 auto;
-    background: orange;
-}
-
 .orange-bg {
 	background: #ffca00;
 }
@@ -322,4 +301,57 @@ img.home-center-img {
 }
 .grayish-bg {
 	background: #FAFAFA;
+}
+
+/*ANIMATIONS*/
+
+@keyframes slideFromLeft {
+  from { 
+  	right: 200px;
+  	opacity: 0; 
+  }
+  to { 
+  	right: 0px;
+  	opacity: 1; 
+  }
+}
+@keyframes slideFromRight {
+  from { 
+  	left: 200px;
+  	opacity: 0; 
+  }
+  to { 
+  	left: 0px;
+  	opacity: 1; 
+  }
+}
+/* Navigation */
+.navi-up {
+	animation: navigationUp .75s ease both;
+}
+.navi-down {
+	animation: navigationDown .75s ease both;
+}
+.skill-in {
+	animation: skillmousein .35s ease both;
+}
+.skill-out {
+	animation: skillmouseout .35s ease both;
+}
+
+@keyframes navigationDown {
+	from {
+		top: -50px;
+	}
+	to {
+		top: 0;
+	}
+}
+@keyframes navigationUp {
+	from {
+		top: 0;
+	}
+	to {
+		top: -50px;
+	}
 }

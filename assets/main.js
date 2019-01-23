@@ -9,6 +9,9 @@
 	
 	'use strict';
 
+	//FLAGS
+	var flagnav = false;
+
 	// Page Link Scrolling Animation
 	$('.page-link').click(function() {
 		var anchor = $(this).attr("dest");
@@ -23,9 +26,24 @@
   	// Slide Animation Handler
 	$(window).scroll(function (event) {
 		var scroll = $(window).scrollTop();
-		console.log(scroll);
+		var navi = $('.navigation');
+		if(scroll >= 250){
+			navi.addClass('navi-down');
+			navi.removeClass('navi-up');
+			if(flagnav == false){
+				flagnav = true;
+			}
+		} else {
+			if(flagnav == true){
+				navi.addClass('navi-up');
+				navi.removeClass('navi-down');
+			}
+		}		
 	});
   	
+  	// animation: navigationUp .75s ease both;
+  	// animation: navigationDown .75s ease both;
+ 
   	// Simple Bootstrap Tooltip
 	$('[data-toggle="tooltip"]').tooltip()  
 
