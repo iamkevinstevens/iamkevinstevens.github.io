@@ -13,7 +13,7 @@
 	var flagnav = false;
 
 	// Page Link Scrolling Animation
-	$('.page-link').click(function() {
+	$('.nav-link, .see-whats-up').click(function() {
 		var anchor = $(this).attr("dest");
 		// $('.link-wrap').removeClass('visible');
 		// $('nav span').removeClass('active');
@@ -27,7 +27,7 @@
 	$(window).scroll(function (event) {
 		var scroll = $(window).scrollTop();
 		var navi = $('.navigation');
-		if(scroll >= 250){
+		if(scroll >= 150){
 			navi.addClass('navi-down');
 			navi.removeClass('navi-up');
 			if(flagnav == false){
@@ -45,7 +45,7 @@
   	// animation: navigationDown .75s ease both;
  
   	// Simple Bootstrap Tooltip
-	$('[data-toggle="tooltip"]').tooltip()  
+	$('[data-toggle="tooltip"]').tooltip();  
 
 })(jQuery);
 
