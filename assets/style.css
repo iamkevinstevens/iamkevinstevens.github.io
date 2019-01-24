@@ -99,10 +99,9 @@ body h2 {
 }
 .navigation .nav-social .nav-soc-spec span{
 	color: #fff;
-}
-.navigation .nav-links .nav-link:hover{
-	color: rgba(255,165,0,1);
-} 
+}	
+.navigation .nav-links .nav-link:hover, 
+.navigation .nav-links .nav-link.active, 
 .navigation .nav-social .nav-soc-spec span:hover{
 	color: rgba(255,165,0,1);
 }
@@ -129,7 +128,7 @@ body h2 {
 }
 .full-screen-panel {
 	min-height: 100vh;
-	padding: 10vh 0 20px 0;
+	padding: 70px 0 20px 0;
 }
 .flexed-center {
 	display: flex;
@@ -154,6 +153,7 @@ h1.mainh1class{
     height: 45px;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 h1.mainh1class a{
 	color: inherit;
@@ -190,7 +190,7 @@ img.home-center-img {
     max-height: 150px;
 	border-radius: 100%;
 }
-#sl-about .about-image {
+#about .about-image {
 	width: 100%;
 	margin: 0 auto;
 	display: flex;
@@ -198,15 +198,15 @@ img.home-center-img {
 	align-items: center;
 	justify-content: flex-start;
 }
-#sl-about .about-image img{
+#about .about-image img{
 	margin-bottom: 25px;
 }
-#sl-about p.about-foreword{
-	margin: 0 0 120px 0;
+#about p.about-foreword{
+	margin: 0 0 75px 0;
 	font: 400 45px/120% 'Aleo';
 	text-align: center;
 }
-#sl-about .about-enclosure{ 
+#about .about-enclosure{ 
 	margin: 50px 0;
 }
 .techno {
@@ -301,7 +301,7 @@ img.home-center-img {
 		width: 150px;
 		height: 150px;
 	}
-	#sl-about p.about-foreword{
+	#about p.about-foreword{
 		font: 400 30px/120% 'Aleo';
 		margin: 0 0 40px 0;
 	}
@@ -347,8 +347,10 @@ img.home-center-img {
 .skills .skill .skill-box:hover .inner{
 	opacity: 1;
 }
+.white-bg {
+	background: #fff;
+}
 .orange-bg {
-	background: #ffca00;
 }
 .green-bg {
 	background: green;

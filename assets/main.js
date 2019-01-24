@@ -27,6 +27,7 @@
 	$(window).scroll(function (event) {
 		var scroll = $(window).scrollTop();
 		var navi = $('.navigation');
+
 		if(scroll >= 150){
 			navi.addClass('navi-down');
 			navi.removeClass('navi-up');
@@ -38,7 +39,18 @@
 				navi.addClass('navi-up');
 				navi.removeClass('navi-down');
 			}
-		}		
+		}
+
+		$('.full-screen-panel').each(function(){
+			var mytop = $(this).position().top;
+			var myid = $(this).attr('id');
+			var heighting = mytop + $(this).outerHeight();
+			if(mytop <= scroll + 35 && heighting > scroll + 35){
+				$('.nav-link[dest="'+ myid +'"]').addClass('active');
+			} else {
+				$('.nav-link[dest="'+ myid +'"]').removeClass('active');
+			}
+		});
 	});
   	
   	// animation: navigationUp .75s ease both;
