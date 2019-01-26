@@ -20,14 +20,15 @@
 		// $("nav").find('[dest="'+ anchor +'"]').addClass('active');
 		$('html, body').animate({
 		  scrollTop: $('#' + anchor).offset().top
-		}, 600);
+		}, 750);
   	});
 
-  	// Slide Animation Handler
+  	// On Window Scroll Animations Handler
 	$(window).scroll(function (event) {
 		var scroll = $(window).scrollTop();
 		var navi = $('.navigation');
 
+		// Navigation Hide/Show Handler
 		if(scroll >= 150){
 			navi.addClass('navi-down');
 			navi.removeClass('navi-up');
@@ -41,18 +42,31 @@
 			}
 		}
 
+		// Navigation Label 'active' class toggler
 		$('.full-screen-panel').each(function(){
 			var mytop = $(this).position().top;
 			var myid = $(this).attr('id');
 			var heighting = mytop + $(this).outerHeight();
 			if(mytop <= scroll + 35 && heighting > scroll + 35){
+				// setTimeout(function(){
 				$('.nav-link[dest="'+ myid +'"]').addClass('active');
+				// },1000);
 			} else {
 				$('.nav-link[dest="'+ myid +'"]').removeClass('active');
 			}
 		});
 	});
-  	
+  		
+  	// class: proj-whereto status appear control
+ 	$('.proj-whereto').hover(
+ 		function(){
+	 		$(this).next().addClass('showFromSide');
+ 		},
+ 		function(){
+	 		$(this).next().removeClass('showFromSide');
+ 		}
+ 	); 	
+
   	// animation: navigationUp .75s ease both;
   	// animation: navigationDown .75s ease both;
  

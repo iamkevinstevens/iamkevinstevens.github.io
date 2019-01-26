@@ -10,8 +10,12 @@ body {
 	color: #2C3E50;
 	font: 400 12px/12px 'Aleo';
 }
-body p, a, li, span{
+body p, a, li, span {
 	font: 400 17px/120% 'Aleo';
+}
+a:focus,
+a:visited {
+	color: inherit;
 }
 body h2 {
 	text-align: center;
@@ -40,6 +44,10 @@ body h2 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+.showFromSide {
+	margin: 0 0 0 0 !important;
+	opacity: 1 !important;
 }
 .tooltip-inner {
     max-width: 200px;
@@ -108,7 +116,7 @@ body h2 {
 .hrclass {
 	width: 70px;
     height: 4px;
-    margin: 25px auto 90px auto;
+    margin: 25px auto 50px auto;
     background: orange;
 }
 .smallhrclass {
@@ -180,7 +188,7 @@ h1.mainh1class a{
 	font-size: 20px;
 }
 .home-box .see-whats-up:hover{
-	background: rgba(255,163,0,0.75);
+	background: rgba(255,163,0,0.55);
 	color: #fff;
 }
 img.home-center-img {
@@ -206,7 +214,7 @@ img.home-center-img {
 	font: 400 45px/120% 'Aleo';
 	text-align: center;
 }
-#about .about-enclosure{ 
+.about-enclosure{ 
 	margin: 50px 0;
 }
 .techno {
@@ -347,10 +355,95 @@ img.home-center-img {
 .skills .skill .skill-box:hover .inner{
 	opacity: 1;
 }
+#proj .projects {
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto 35px auto;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0 15px;
+}
+#proj .projects .project{
+	position: relative;
+	z-index: 1;
+    width: 33.3%;
+    height: 300px;
+    margin: 0 -2px 0 0;
+	background-repeat: no-repeat !important;
+  	background-size: cover !important;
+  	background-position: center !important; 
+}
+.project .proj-plate {
+	background: rgba(255,255,255,0);
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+}
+.project:hover .proj-plate {
+	background: rgba(255,255,255,0.95);
+	opacity: 1;
+}
+.project .proj-plate span {
+	display: block;
+}
+.project .proj-plate .proj-name {
+	font: 500 25px/30px 'Aleo';
+	margin: 0 100px 0 0;
+	opacity: 0;
+}
+.project .proj-plate .proj-ind {
+	font: 600 15px/30px 'Aleo';
+	margin: 0 100px 35px 0;
+	opacity: 0;
+}
+a.proj-whereto{
+	font: 500 15px/110% 'Aleo';
+	text-decoration: none;
+	background: rgba(255,165,0,0.55);
+	border: 1px solid rgba(255,165,0,1);
+	color: #fff;
+	text-align: center; 
+	width: 35%;
+	padding: 10px;
+	cursor: pointer;
+	margin: 0 0 0 100px;
+	opacity: 0;
+}
+.project:hover .proj-plate .proj-name {
+	margin: 0 0 0 0;
+	opacity: 1;
+}
+.project:hover .proj-plate .proj-ind {
+	margin: 0 0 35px 0;
+	opacity: 1;
+}
+.project:hover .proj-plate .proj-whereto {
+	margin: 0 0 0 0;
+	opacity: 1;
+}
+span.status {
+	font: 600 12px/15px 'Aleo';
+	opacity: 0;
+	padding: 11px 0 0 0;
+	margin: 0 0 0 70px;
+}
+a.proj-whereto:hover{
+	background: rgba(255,255,255,1);
+	color: rgba(255,165,0,1);
+	border: 1px solid rgba(255,165,0,1);
+}
 .white-bg {
 	background: #fff;
-}
-.orange-bg {
 }
 .green-bg {
 	background: green;
