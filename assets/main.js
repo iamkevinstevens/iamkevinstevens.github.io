@@ -56,6 +56,16 @@
 			}
 		});
 	});
+
+	// class: proj-img class style control
+	$('.proj-img').each(function(){
+		var databg = $(this).data('bg');
+		$(this).css({'background': 'linear-gradient(rgba(255,255,255,0.15),rgba(255,255,255,0.15)),url("'+databg+'")'});
+	});
+	$('.proj-plate').each(function(){
+		var imgsrc = $(this).find('img').attr('src');
+		$(this).find('img').attr('alt',imgsrc);
+	});
   		
   	// class: proj-whereto status appear control
  	$('.proj-whereto').hover(

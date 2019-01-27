@@ -371,14 +371,26 @@ img.home-center-img {
     width: 33.3%;
     height: 300px;
     margin: 0 -2px 0 0;
+}
+#proj .projects .project .proj-img {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 12px;
 	background-repeat: no-repeat !important;
   	background-size: cover !important;
-  	background-position: center !important; 
+  	background-position: right !important; 
+}
+#proj .projects .project .proj-img img{
+	
 }
 .project .proj-plate {
 	background: rgba(255,255,255,0);
 	position: absolute;
-	z-index: 2;
+	z-index: 3;
 	top: 0;
 	bottom: 0;
 	left: 0;
@@ -396,6 +408,12 @@ img.home-center-img {
 .project .proj-plate span {
 	display: block;
 }
+.project .proj-plate img {
+	width: 100%;
+	max-width: 120px;
+	height: auto;
+	margin-bottom: 55px;
+}
 .project .proj-plate .proj-name {
 	font: 500 25px/30px 'Aleo';
 	margin: 0 100px 0 0;
@@ -403,7 +421,7 @@ img.home-center-img {
 }
 .project .proj-plate .proj-ind {
 	font: 600 15px/30px 'Aleo';
-	margin: 0 100px 35px 0;
+	margin: 0 100px 15px 0;
 	opacity: 0;
 }
 a.proj-whereto{
@@ -424,7 +442,7 @@ a.proj-whereto{
 	opacity: 1;
 }
 .project:hover .proj-plate .proj-ind {
-	margin: 0 0 35px 0;
+	margin: 0 0 15px 0;
 	opacity: 1;
 }
 .project:hover .proj-plate .proj-whereto {
