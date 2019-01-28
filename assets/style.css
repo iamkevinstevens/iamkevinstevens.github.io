@@ -113,6 +113,47 @@ body h2 {
 .navigation .nav-social .nav-soc-spec span:hover{
 	color: rgba(255,165,0,1);
 }
+.navigation .nav-burger {
+	display: none;
+}
+.navigation.mobile-mode {
+	height: 45px;
+}
+.navigation .nav-burger i{
+	font-size: 35px;
+	color: #fff;
+	cursor: pointer;
+}
+.navigation .nav-burger i:hover{
+	color: orange;
+}
+.nav-burger-wrap {
+	display: none;
+	background-color: rgba(44,62,80,0.80);
+	padding: 20px 0 5px 10px;
+}
+.nav-burger.open i{
+	color: orange;
+}
+.nav-burger-wrap .nav-links{
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: flex-start;
+	width: 100%;
+}
+.nav-burger-wrap .nav-links .nav-link {
+	margin: 0 0 10px 0;
+	font: 500 27px/100% 'Aleo';
+}
+.navigation.mobile-mode .nav-inside .nav-links{
+	display: none;
+}
+.navigation.mobile-mode .nav-burger {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	height: 100%;
+}
 .hrclass {
 	width: 70px;
     height: 4px;
@@ -128,11 +169,6 @@ body h2 {
 .small-heading {
 	font: 700 25px/120% 'Aleo';
 	text-align: center;
-}
-@media only screen and (max-width: 768px) {
-	.hrclass {
-    	margin: 25px auto 50px auto;
-	}
 }
 .full-screen-panel {
 	min-height: 100vh;
@@ -369,7 +405,7 @@ img.home-center-img {
 	position: relative;
 	z-index: 1;
     width: 33.3%;
-    height: 300px;
+    height: 265px;
     margin: 0 -2px 0 0;
 }
 #proj .projects .project .proj-img {
@@ -382,10 +418,11 @@ img.home-center-img {
 	padding: 12px;
 	background-repeat: no-repeat !important;
   	background-size: cover !important;
-  	background-position: right !important; 
+  	background-position: left !important;
 }
 #proj .projects .project .proj-img img{
-	
+	width: 100%;
+	height: auto;
 }
 .project .proj-plate {
 	background: rgba(255,255,255,0);
@@ -402,7 +439,7 @@ img.home-center-img {
 	opacity: 0;
 }
 .project:hover .proj-plate {
-	background: rgba(255,255,255,0.95);
+	background: linear-gradient(rgba(255,255,255,0.90),rgba(255,255,255,1));
 	opacity: 1;
 }
 .project .proj-plate span {
@@ -412,7 +449,7 @@ img.home-center-img {
 	width: 100%;
 	max-width: 120px;
 	height: auto;
-	margin-bottom: 55px;
+	margin-bottom: 35px;
 }
 .project .proj-plate .proj-name {
 	font: 500 25px/30px 'Aleo';
@@ -460,6 +497,104 @@ a.proj-whereto:hover{
 	color: rgba(255,165,0,1);
 	border: 1px solid rgba(255,165,0,1);
 }
+.con-foreword {
+	margin: 0 0 30px 0;
+	padding: 0 15px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+.con-foreword i{
+	text-align: center;
+    font-size: 80px;
+    margin: 0 0 25px 0;    
+}
+.con-foreword p:nth-of-type(1){
+	font: 700 25px/30px 'Aleo';
+	text-align: center;
+}
+.con-foreword p:nth-of-type(2){
+	font: 700 15px/30px 'Aleo';
+	text-align: center;	
+}
+.contacts {
+	width: 100%;
+	max-width: 900px;
+	margin: 0 auto 10px auto;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+}
+.contact {
+	width: 75px;
+	height: 75px;
+	border-radius: 10px;
+	border: 2px solid orange;
+    background: rgba(255,165,0,0);
+	margin: 0 15px 15px 15px;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+	cursor: pointer;
+}
+.contact:hover {
+    background: rgba(255,165,0,1);
+}
+.contact i{
+	font-size: 50px;
+}
+.email-clipboard {
+	width: 100%;
+	text-align: center;
+}
+.email-clipboard span{
+	font: 500 15px/17px 'Aleo';
+	opacity: 0;
+}
+
+@media only screen and (max-width: 1165px) {
+	#proj .projects {
+		justify-content: center;
+	}
+	#proj .projects .project{
+		width: 50%;
+		max-width: 369px;
+	}
+	.project .proj-plate .proj-name {
+		font: 500 20px/30px 'Aleo';
+	}
+	.project .proj-plate .proj-ind {
+		font: 600 10px/30px 'Aleo';
+	}
+	.project .proj-plate img {
+		margin-bottom: 15px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.hrclass {
+    	margin: 25px auto 50px auto;
+	}
+	h1.mainh1class {
+		justify-content: center;
+	}
+	#proj .projects .project{
+		height: unset;
+		padding: 18% 0;
+	}
+}
+@media only screen and (max-width: 600px) {
+	#proj .projects .project{
+		width: 100%;
+		max-width: 369px;
+		height: 220px;
+		padding: unset;
+	}
+}
+
 .white-bg {
 	background: #fff;
 }

@@ -11,16 +11,38 @@
 
 	//FLAGS
 	var flagnav = false;
+	var flagmob = false;
+
+	function slideUpNavBurger(){
+		$('.nav-burger-wrap').slideUp();
+  		$('.nav-burger').removeClass('open');
+	}
+
+	function checkMobileMode(){
+		var mywidth = $(window).width();
+		if(mywidth <= 653){
+			if(flagmob == false){
+				$('.navigation').addClass('mobile-mode');
+				flagmob = true;
+			}
+		} else {
+			$('.navigation').removeClass('mobile-mode');
+			slideUpNavBurger();
+			flagmob = false;
+		}
+	}
 
 	// Page Link Scrolling Animation
 	$('.nav-link, .see-whats-up').click(function() {
 		var anchor = $(this).attr("dest");
-		// $('.link-wrap').removeClass('visible');
-		// $('nav span').removeClass('active');
-		// $("nav").find('[dest="'+ anchor +'"]').addClass('active');
 		$('html, body').animate({
 		  scrollTop: $('#' + anchor).offset().top
 		}, 750);
+  	});
+
+  	$('.navigation .nav-burger i').click(function(){
+  		$('.nav-burger-wrap').slideToggle();
+  		$('.nav-burger').toggleClass('open');
   	});
 
   	// On Window Scroll Animations Handler
@@ -39,6 +61,8 @@
 			if(flagnav == true){
 				navi.addClass('navi-up');
 				navi.removeClass('navi-down');
+				$('.nav-burger-wrap').slideUp();
+				$('.nav-burger').removeClass('open');
 			}
 		}
 
@@ -57,10 +81,15 @@
 		});
 	});
 
+	$(window).resize(function(){
+		checkMobileMode();
+	});
+
 	// class: proj-img class style control
 	$('.proj-img').each(function(){
 		var databg = $(this).data('bg');
-		$(this).css({'background': 'linear-gradient(rgba(255,255,255,0.15),rgba(255,255,255,0.15)),url("'+databg+'")'});
+		$("img",this).attr('src', databg);
+		// $(this).css({'background': 'linear-gradient(rgba(255,255,255,0.15),rgba(255,255,255,0.15)),url("'+databg+'")'});
 	});
 	$('.proj-plate').each(function(){
 		var imgsrc = $(this).find('img').attr('src');
@@ -77,11 +106,26 @@
  		}
  	); 	
 
-  	// animation: navigationUp .75s ease both;
-  	// animation: navigationDown .75s ease both;
- 
+ 	$('.contact').click(function(){
+ 		var iam = $(this);
+ 		var datacopy = $(this).data('copy');
+ 		if(iam.hasClass('newtab')){
+ 			window.open(datacopy,'_blank');
+ 		}
+ 		if(iam.hasClass('email-to')){
+ 			var ecs = $('.email-clipboard span');
+ 			ecs.css({'opacity':'1'});
+ 			setTimeout(function(){
+ 				ecs.css({'opacity':'0'});
+ 			},1500);
+ 		}
+ 	});
+
   	// Simple Bootstrap Tooltip
 	$('[data-toggle="tooltip"]').tooltip();  
+	
+	// on Document ready functions
+	checkMobileMode();
 
 })(jQuery);
 
