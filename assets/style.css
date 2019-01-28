@@ -547,15 +547,15 @@ a.proj-whereto:hover{
 .contact i{
 	font-size: 50px;
 }
-.email-clipboard {
+footer .footer-wrap {
 	width: 100%;
-	text-align: center;
+	height: 35px;
+	background: #2c3e50;
 }
-.email-clipboard span{
-	font: 500 15px/17px 'Aleo';
-	opacity: 0;
+footer .footer-wrap span{
+	font: 400 12px/15px 'Aleo';
+	color: orange;
 }
-
 @media only screen and (max-width: 1165px) {
 	#proj .projects {
 		justify-content: center;

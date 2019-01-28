@@ -112,13 +112,6 @@
  		if(iam.hasClass('newtab')){
  			window.open(datacopy,'_blank');
  		}
- 		if(iam.hasClass('email-to')){
- 			var ecs = $('.email-clipboard span');
- 			ecs.css({'opacity':'1'});
- 			setTimeout(function(){
- 				ecs.css({'opacity':'0'});
- 			},1500);
- 		}
  	});
 
   	// Simple Bootstrap Tooltip
