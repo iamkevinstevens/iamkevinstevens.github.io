@@ -32,6 +32,10 @@
 		}
 	}
 
+	function executeSlides(){
+		
+	}
+	executeSlides();
 	// Page Link Scrolling Animation
 	$('.nav-link, .see-whats-up').click(function() {
 		var anchor = $(this).attr("dest");
@@ -49,6 +53,8 @@
 	$(window).scroll(function (event) {
 		var scroll = $(window).scrollTop();
 		var navi = $('.navigation');
+		var winheight = $(window).height();
+		var winheightsplit = $(window).height() / 2 + 150;
 
 		// Navigation Hide/Show Handler
 		if(scroll >= 150){
@@ -72,11 +78,28 @@
 			var myid = $(this).attr('id');
 			var heighting = mytop + $(this).outerHeight();
 			if(mytop <= scroll + 35 && heighting > scroll + 35){
-				// setTimeout(function(){
 				$('.nav-link[dest="'+ myid +'"]').addClass('active');
-				// },1000);
 			} else {
 				$('.nav-link[dest="'+ myid +'"]').removeClass('active');
+			}
+		});
+
+		// Slide Animations
+		$(".animate").each(function(){
+			var dataan = $(this).data("an");
+			if(scroll + winheightsplit >= $(this).offset().top){
+				if(dataan == "right"){
+					$(this).addClass("slideRight");
+				}
+				if(dataan == "left"){
+					$(this).addClass("slideLeft");
+				}
+				if(dataan == "top"){
+					$(this).addClass("slideTop");
+				}
+				if(dataan == "bottom"){
+					$(this).addClass("slideBottom");
+				}
 			}
 		});
 	});

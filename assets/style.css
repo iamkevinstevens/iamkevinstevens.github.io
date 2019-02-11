@@ -5,6 +5,10 @@
 * Purpose: [Stylesheet]
 */
 
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
 body {
 	background: #fff;
 	color: #2C3E50;
@@ -610,10 +614,30 @@ footer .footer-wrap span{
 
 /*ANIMATIONS*/
 
+[data-an=left] {
+	position: relative;
+	right: 200px;
+  	opacity: 0;
+}
+[data-an=right] {
+	position: relative;
+	left: 200px;
+  	opacity: 0;
+}
+[data-an=top] {
+	position: relative;
+	bottom: 200px;
+  	opacity: 0;
+}
+[data-an=bottom] {
+	position: relative;
+	top: 200px;
+  	opacity: 0;
+}
 @keyframes slideFromLeft {
   from { 
   	right: 200px;
-  	opacity: 0; 
+  	opacity: 0;
   }
   to { 
   	right: 0px;
@@ -630,6 +654,16 @@ footer .footer-wrap span{
   	opacity: 1; 
   }
 }
+@keyframes slideFromBottom {
+  from { 
+  	top: 200px;
+  	opacity: 0; 
+  }
+  to { 
+  	top: 0px;
+  	opacity: 1; 
+  }
+}
 /* Navigation */
 .navi-up {
 	animation: navigationUp .75s ease both;
@@ -642,6 +676,18 @@ footer .footer-wrap span{
 }
 .skill-out {
 	animation: skillmouseout .35s ease both;
+}
+.slideLeft {
+	animation: slideFromLeft 1.20s ease both;
+}
+.slideRight {
+	animation: slideFromRight 1.20s ease both;
+}
+.slideTop {
+	animation: slideFromTop 1.20s ease both;
+}
+.slideBottom {
+	animation: slideFromBottom 1.20s ease both;
 }
 
 @keyframes navigationDown {
