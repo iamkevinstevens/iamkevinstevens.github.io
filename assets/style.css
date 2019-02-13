@@ -678,16 +678,16 @@ footer .footer-wrap span{
 .skill-out {
 	animation: skillmouseout .35s ease both;
 }
-.slideLeft {
+.slideleft {
 	animation: slideFromLeft 1.20s ease both;
 }
-.slideRight {
+.slideright {
 	animation: slideFromRight 1.20s ease both;
 }
-.slideTop {
+.slidetop {
 	animation: slideFromTop 1.20s ease both;
 }
-.slideBottom {
+.slidebottom {
 	animation: slideFromBottom 1.20s ease both;
 }
 

@@ -32,10 +32,6 @@
 		}
 	}
 
-	function executeSlides(){
-		
-	}
-	executeSlides();
 	// Page Link Scrolling Animation
 	$('.nav-link, .see-whats-up').click(function() {
 		var anchor = $(this).attr("dest");
@@ -54,7 +50,7 @@
 		var scroll = $(window).scrollTop();
 		var navi = $('.navigation');
 		var winheight = $(window).height();
-		var winheightsplit = $(window).height() / 2 + 150;
+		var winheightsplit = $(window).height() / 2 + 200;
 
 		// Navigation Hide/Show Handler
 		if(scroll >= 150){
@@ -88,18 +84,9 @@
 		$(".animate").each(function(){
 			var dataan = $(this).data("an");
 			if(scroll + winheightsplit >= $(this).offset().top){
-				if(dataan == "right"){
-					$(this).addClass("slideRight");
-				}
-				if(dataan == "left"){
-					$(this).addClass("slideLeft");
-				}
-				if(dataan == "top"){
-					$(this).addClass("slideTop");
-				}
-				if(dataan == "bottom"){
-					$(this).addClass("slideBottom");
-				}
+				$(this)
+				.addClass('slide' + dataan)
+				.removeClass("animate");
 			}
 		});
 	});
@@ -112,7 +99,6 @@
 	$('.proj-img').each(function(){
 		var databg = $(this).data('bg');
 		$("img",this).attr('src', databg);
-		// $(this).css({'background': 'linear-gradient(rgba(255,255,255,0.15),rgba(255,255,255,0.15)),url("'+databg+'")'});
 	});
 	$('.proj-plate').each(function(){
 		var imgsrc = $(this).find('img').attr('src');
