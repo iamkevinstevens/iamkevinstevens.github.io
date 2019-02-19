@@ -12,6 +12,17 @@
 	//FLAGS
 	var flagnav = false;
 	var flagmob = false;
+	var scrollx = $(window).scrollTop();
+	var winheightsplitx = $(window).height() / 2 + 200;
+
+	$(".animate").each(function(){
+		var dataan = $(this).data("an");
+		if(scrollx + winheightsplitx >= $(this).offset().top){
+			$(this)
+			.addClass('slide' + dataan)
+			.removeClass("animate");
+		}
+	});
 
 	function slideUpNavBurger(){
 		$('.nav-burger-wrap').slideUp();
