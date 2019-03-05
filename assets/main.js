@@ -61,7 +61,7 @@
 		var scroll = $(window).scrollTop();
 		var navi = $('.navigation');
 		var winheight = $(window).height();
-		var winheightsplit = $(window).height() / 2 + 200;
+		var winheightsplit = $(window).height() * 0.75;
 
 		// Navigation Hide/Show Handler
 		if(scroll >= 150){

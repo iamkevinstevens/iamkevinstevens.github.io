@@ -27,6 +27,20 @@ body h2 {
 	font: 700 35px/100% 'Aleo';
 	color: #2C3E50;
 }
+
+.white-bg {
+	background: #fff;
+}
+.green-bg {
+	background: green;
+}
+.gray-bg {
+	background: gray;
+}
+.grayish-bg {
+	background: #FAFAFA;
+}
+
 .tr {
 	-webkit-transition: all 0.3s ease-out;
 	-moz-transition: all 0.3s ease-out;
@@ -177,7 +191,8 @@ body h2 {
 }
 .full-screen-panel {
 	min-height: 100vh;
-	padding: 70px 0 20px 0;
+	/*padding: 70px 0 20px 0;*/
+    padding: 12vh 0 3vh 0;
 }
 .flexed-center {
 	display: flex;
@@ -345,16 +360,7 @@ img.home-center-img {
 
 	position: relative;
 }
-@media only screen and (max-width: 550px) {
-	.skills .skill{
-		width: 150px;
-		height: 150px;
-	}
-	#about p.about-foreword{
-		font: 400 30px/120% 'Aleo';
-		margin: 0 0 40px 0;
-	}
-}
+
 .skills .skill .skill-image {
 	width: 100%;
 	height: 100%;
@@ -502,6 +508,9 @@ a.proj-whereto:hover{
 	color: rgba(255,165,0,1);
 	border: 1px solid rgba(255,165,0,1);
 }
+#contact {
+	position: relative;
+}
 .con-foreword {
 	margin: 0 0 30px 0;
 	padding: 0 15px;
@@ -552,12 +561,17 @@ a.proj-whereto:hover{
 .contact i{
 	font-size: 50px;
 }
-footer .footer-wrap {
+.footer-copyright .footer-wrap {
+	position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
 	width: 100%;
 	height: 35px;
 	background: #2c3e50;
 }
-footer .footer-wrap span{
+.footer-copyright .footer-wrap span{
 	font: 400 12px/15px 'Aleo';
 	color: orange;
 }
@@ -599,19 +613,20 @@ footer .footer-wrap span{
 		padding: unset;
 	}
 }
+@media only screen and (max-width: 550px) {
+	.skills .skill{
+		width: 150px;
+		height: 150px;
+	}
+	#about p.about-foreword{
+		font: 400 30px/120% 'Aleo';
+		margin: 0 0 40px 0;
+	}
+	.con-foreword p:nth-of-type(1){
+	    font: 700 16px/30px 'Aleo';
+	}
+}
 
-.white-bg {
-	background: #fff;
-}
-.green-bg {
-	background: green;
-}
-.gray-bg {
-	background: gray;
-}
-.grayish-bg {
-	background: #FAFAFA;
-}
 
 /*ANIMATIONS*/
 
@@ -635,6 +650,8 @@ footer .footer-wrap span{
 	top: 200px;
   	opacity: 0;
 }
+
+
 @keyframes slideFromLeft {
   from { 
   	right: 200px;
