@@ -630,31 +630,6 @@ span.status {
 	top: 200px;
 	opacity: 0;
 }
-.navi-up {
-	animation: navigationUp .75s ease both;
-}
-.navi-down {
-	animation: navigationDown .75s ease both;
-}
-.skill-in {
-	animation: skillmousein .35s ease both;
-}
-.skill-out {
-	animation: skillmouseout .35s ease both;
-}
-.slideleft {
-	animation: slideFromLeft 1.20s ease both;
-}
-.slideright {
-	animation: slideFromRight 1.20s ease both;
-}
-.slidetop {
-	animation: slideFromTop 1.20s ease both;
-}
-.slidebottom {
-	animation: slideFromBottom 1.20s ease both;
-}
-
 @keyframes slideFromTop {
 	from {
         background-position: 0 0;
@@ -710,6 +685,31 @@ span.status {
 	to {
 		top: -50px;
 	}
+}
+
+.navi-up {
+	animation: navigationUp .75s ease both;
+}
+.navi-down {
+	animation: navigationDown .75s ease both;
+}
+.skill-in {
+	animation: skillmousein .35s ease both;
+}
+.skill-out {
+	animation: skillmouseout .35s ease both;
+}
+.slideleft {
+	animation: slideFromLeft 1.20s ease both;
+}
+.slideright {
+	animation: slideFromRight 1.20s ease both;
+}
+.slidetop {
+	animation: slideFromTop 1.20s ease both;
+}
+.slidebottom {
+	animation: slideFromBottom 1.20s ease both;
 }
 
 @media only screen and (max-width: 1165px) {
