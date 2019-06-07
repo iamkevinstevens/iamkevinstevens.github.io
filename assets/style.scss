@@ -610,26 +610,7 @@ span.status {
 		}
 	}
 }
-[data-an=left] {
-	position: relative;
-	right: 200px;
-	opacity: 0;
-}
-[data-an=right] {
-	position: relative;
-	left: 200px;
-	opacity: 0;
-}
-[data-an=top] {
-	position: relative;
-	bottom: 200px;
-	opacity: 0;
-}
-[data-an=bottom] {
-	position: relative;
-	top: 200px;
-	opacity: 0;
-}
+
 @keyframes slideFromTop {
 	from {
         background-position: 0 0;
@@ -686,6 +667,28 @@ span.status {
 		top: -50px;
 	}
 }
+
+[data-an=left] {
+	position: relative;
+	right: 200px;
+	opacity: 0;
+}
+[data-an=right] {
+	position: relative;
+	left: 200px;
+	opacity: 0;
+}
+[data-an=top] {
+	position: relative;
+	bottom: 200px;
+	opacity: 0;
+}
+[data-an=bottom] {
+	position: relative;
+	top: 200px;
+	opacity: 0;
+}
+
 
 .navi-up {
 	animation: navigationUp .75s ease both;
