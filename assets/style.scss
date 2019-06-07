@@ -27,7 +27,7 @@ $border_bottom_color_1: #2C3E50;
 	}
 }
 /*ANIMATIONS*/
-@keyframes "slideFromLeft" {
+@keyframes slideFromLeft {
 	from {
 		right: 200px;
 		opacity: 0;
@@ -37,7 +37,7 @@ $border_bottom_color_1: #2C3E50;
 		opacity: 1;
 	}
 }
-@keyframes "slideFromRight" {
+@keyframes slideFromRight {
 	from {
 		left: 200px;
 		opacity: 0;
@@ -47,7 +47,7 @@ $border_bottom_color_1: #2C3E50;
 		opacity: 1;
 	}
 }
-@keyframes "slideFromBottom" {
+@keyframes slideFromBottom {
 	from {
 		top: 200px;
 		opacity: 0;
@@ -58,7 +58,7 @@ $border_bottom_color_1: #2C3E50;
 	}
 }
 /* Navigation */
-@keyframes "navigationDown" {
+@keyframes navigationDown {
 	from {
 		top: -50px;
 	}
@@ -66,7 +66,7 @@ $border_bottom_color_1: #2C3E50;
 		top: 0;
 	}
 }
-@keyframes "navigationUp" {
+@keyframes navigationUp {
 	from {
 		top: 0;
 	}
