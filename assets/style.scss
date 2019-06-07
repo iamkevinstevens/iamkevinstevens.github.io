@@ -18,62 +18,7 @@ $border_bottom_color_1: #2C3E50;
 * Last Updated: January 2019
 * Purpose: [Stylesheet]
 */
-@keyframes slide {
-	from {
-        background-position: 0 0;
-	}
-	to {
-		background-position: -400px 0;
-	}
-}
-/*ANIMATIONS*/
-@keyframes slideFromLeft {
-	from {
-		right: 200px;
-		opacity: 0;
-	}
-	to {
-		right: 0px;
-		opacity: 1;
-	}
-}
-@keyframes slideFromRight {
-	from {
-		left: 200px;
-		opacity: 0;
-	}
-	to {
-		left: 0px;
-		opacity: 1;
-	}
-}
-@keyframes slideFromBottom {
-	from {
-		top: 200px;
-		opacity: 0;
-	}
-	to {
-		top: 0px;
-		opacity: 1;
-	}
-}
-/* Navigation */
-@keyframes navigationDown {
-	from {
-		top: -50px;
-	}
-	to {
-		top: 0;
-	}
-}
-@keyframes navigationUp {
-	from {
-		top: 0;
-	}
-	to {
-		top: -50px;
-	}
-}
+
 html {
 	overflow-x: hidden;
 	width: 100%;
@@ -716,6 +661,64 @@ span.status {
 .slidebottom {
 	animation: slideFromBottom 1.20s ease both;
 }
+
+@keyframes slide {
+	from {
+        background-position: 0 0;
+	}
+	to {
+		background-position: -400px 0;
+	}
+}
+/*ANIMATIONS*/
+@keyframes slideFromLeft {
+	from {
+		right: 200px;
+		opacity: 0;
+	}
+	to {
+		right: 0px;
+		opacity: 1;
+	}
+}
+@keyframes slideFromRight {
+	from {
+		left: 200px;
+		opacity: 0;
+	}
+	to {
+		left: 0px;
+		opacity: 1;
+	}
+}
+@keyframes slideFromBottom {
+	from {
+		top: 200px;
+		opacity: 0;
+	}
+	to {
+		top: 0px;
+		opacity: 1;
+	}
+}
+/* Navigation */
+@keyframes navigationDown {
+	from {
+		top: -50px;
+	}
+	to {
+		top: 0;
+	}
+}
+@keyframes navigationUp {
+	from {
+		top: 0;
+	}
+	to {
+		top: -50px;
+	}
+}
+
 @media only screen and (max-width: 1165px) {
 	#proj {
 		.projects {
