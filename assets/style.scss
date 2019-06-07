@@ -18,7 +18,7 @@ $border_bottom_color_1: #2C3E50;
 * Last Updated: January 2019
 * Purpose: [Stylesheet]
 */
-@-webkit-keyframes slide {
+@keyframes slide {
 	from {
         background-position: 0 0;
 	}
@@ -296,7 +296,7 @@ span {
 	margin: 0;
 	text-align: center;
 	box-sizing: border-box;
-	-webkit-animation: slide 20s linear infinite;
+	animation: slide 20s linear infinite;
 }
 h1.mainh1class {
 	text-align: left;
