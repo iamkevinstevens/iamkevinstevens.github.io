@@ -21,6 +21,7 @@ $border_bottom_color_1: #2C3E50;
 @-webkit-keyframes "slide" {
 	from {
         background-position: 0 0;
+        padding: 0 0 0 0;
 	}
 	to {
 		background-position: -400px 0;
