@@ -655,7 +655,7 @@ span.status {
 	animation: slideFromBottom 1.20s ease both;
 }
 
-@keyframes slide {
+@keyframes slideFromTop {
 	from {
         background-position: 0 0;
 	}
