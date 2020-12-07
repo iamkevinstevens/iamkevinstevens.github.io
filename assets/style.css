@@ -1,0 +1,780 @@
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  background: #fff;
+  color: #2C3E50;
+  font: 400 12px/12px "Aleo";
+  overflow-y: hidden;
+}
+body p {
+  font: 400 17px/120% "Aleo";
+}
+body h2 {
+  text-align: center;
+  font: 700 35px/100% "Aleo";
+  color: #2C3E50;
+}
+
+a {
+  font: 400 17px/120% "Aleo";
+}
+a:focus {
+  color: inherit;
+}
+a:visited {
+  color: inherit;
+}
+
+li {
+  font: 400 17px/120% "Aleo";
+}
+
+span {
+  font: 400 17px/120% "Aleo";
+}
+
+.white-bg {
+  background: #fff;
+}
+
+.green-bg {
+  background: green;
+}
+
+.gray-bg {
+  background: gray;
+}
+
+.grayish-bg {
+  background: #FAFAFA;
+}
+
+.tr {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.tr-25 {
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+}
+
+.tr-50 {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.dflex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.showFromSide {
+  margin: 0 0 0 0 !important;
+  opacity: 1 !important;
+}
+
+.tooltip-inner {
+  max-width: 200px;
+  padding: 3px 8px;
+  color: #fff;
+  text-align: center;
+  background-color: #2C3E50;
+  border-radius: 0.25rem;
+}
+
+.tooltip .arrow:before {
+  border-bottom-color: #2C3E50 !important;
+  border-top-color: #2C3E50 !important;
+}
+
+.navigation {
+  position: fixed;
+  z-index: 999;
+  top: -50px;
+  left: 0;
+  right: 0;
+  height: 35px;
+  background: #2c3e50;
+}
+.navigation .nav-inside {
+  width: 100%;
+  height: inherit;
+  padding: 0 15px;
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation .nav-links {
+  width: 300px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation .nav-links .nav-link {
+  color: white;
+  font: 500 17px/100% "Aleo";
+  padding: 0;
+  cursor: pointer;
+}
+.navigation .nav-links .nav-link:hover {
+  color: orange;
+}
+.navigation .nav-links .nav-link.active {
+  color: orange;
+}
+.navigation .nav-social {
+  width: 230px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation .nav-social .nav-soc-spec {
+  width: 70px;
+  justify-content: space-between;
+}
+.navigation .nav-social .nav-soc-spec span {
+  color: #fff;
+}
+.navigation .nav-social .nav-soc-spec span:hover {
+  color: orange;
+}
+.navigation .nav-burger {
+  display: none;
+}
+.navigation .nav-burger i {
+  font-size: 35px;
+  color: #fff;
+  cursor: pointer;
+}
+.navigation .nav-burger i:hover {
+  color: orange;
+}
+
+.navigation.mobile-mode {
+  height: 45px;
+}
+.navigation.mobile-mode .nav-inside .nav-links {
+  display: none;
+}
+.navigation.mobile-mode .nav-burger {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-burger-wrap {
+  display: none;
+  background-color: rgba(44, 62, 80, 0.8);
+  padding: 20px 0 5px 10px;
+}
+.nav-burger-wrap .nav-links {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  width: 100%;
+}
+.nav-burger-wrap .nav-links .nav-link {
+  margin: 0 0 10px 0;
+  font: 500 27px/100% "Aleo";
+}
+
+.nav-burger.open i {
+  color: orange;
+}
+
+.hrclass {
+  width: 70px;
+  height: 4px;
+  margin: 25px auto 50px auto;
+  background: orange;
+}
+
+.smallhrclass {
+  width: 50px;
+  height: 4px;
+  margin: 10px auto 25px auto;
+  background: orange;
+}
+
+.small-heading {
+  font: 700 25px/120% "Aleo";
+  text-align: center;
+}
+
+.full-screen-panel {
+  min-height: 100vh;
+  padding: 12vh 0 3vh 0;
+}
+
+.flexed-center {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+
+.home-slide {
+  background: gray url("images/geometry2.png") repeat 0 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  box-sizing: border-box;
+  animation: slide 20s linear infinite;
+}
+
+h1.mainh1class {
+  text-align: left;
+  font-size: 20px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+h1.mainh1class a {
+  color: inherit;
+}
+
+.home-box {
+  margin: 70px 0 0 0;
+}
+.home-box p {
+  text-align: center;
+  font: 500 40px/120% "Aleo";
+  color: #000;
+}
+.home-box .see-whats-up {
+  width: 275px;
+  font: 400 30px/100% "Aleo";
+  color: orange;
+  border: 2px solid rgba(255, 163, 0, 0.65);
+  background: rgba(255, 163, 0, 0);
+  padding: 10px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.home-box .see-whats-up i {
+  font-size: 20px;
+}
+.home-box .see-whats-up:hover {
+  background: rgba(255, 163, 0, 0.55);
+  color: #fff;
+}
+
+img.home-center-img {
+  width: auto;
+  height: auto;
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 100%;
+}
+
+#about .about-image {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+#about .about-image img {
+  margin-bottom: 25px;
+}
+#about p.about-foreword {
+  margin: 0 0 75px 0;
+  font: 400 45px/120% "Aleo";
+  text-align: center;
+}
+
+.about-enclosure {
+  margin: 50px 0;
+}
+
+.techno {
+  width: 100%;
+  max-width: 888px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.techno .techspec {
+  border-radius: 5px;
+  margin: 0 15px 25px 15px;
+  height: 100px;
+  width: 100px;
+  font-size: 40px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  position: relative;
+}
+.techno .techspec .hexa {
+  background-color: #fff;
+  height: 100%;
+  width: calc(100% * 0.57735);
+  display: inline-block;
+}
+.techno .techspec .hexa i {
+  position: absolute;
+  top: 29px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.techno .techspec .hexa .hexa-img-holder {
+  position: absolute;
+  z-index: 2;
+  top: 29px;
+  left: 0;
+  right: 0;
+}
+.techno .techspec .hexa img {
+  height: 40px;
+  width: 40px;
+}
+.techno .techspec .hexa:before {
+  position: absolute;
+  top: 0;
+  right: calc((100% / 2) - ((100% * 0.57735) / 2));
+  background-color: inherit;
+  height: inherit;
+  width: inherit;
+  content: "";
+  transform: rotateZ(60deg);
+  z-index: 1;
+}
+.techno .techspec .hexa:after {
+  position: absolute;
+  top: 0;
+  right: calc((100% / 2) - ((100% * 0.57735) / 2));
+  background-color: inherit;
+  height: inherit;
+  width: inherit;
+  content: "";
+  transform: rotateZ(-60deg);
+}
+
+.skills {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+.skills .skill {
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  border-radius: 10px;
+  margin: 0px 10px 10px 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.skills .skill .skill-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skills .skill .skill-image img {
+  width: 80%;
+  height: auto;
+}
+.skills .skill .skill-box {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.skills .skill .skill-box .inner {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid orange;
+  width: 90%;
+  height: 90%;
+  border-radius: 10px;
+  opacity: 0;
+}
+.skills .skill .skill-box .inner span {
+  width: 90%;
+  margin: 0 auto;
+  word-wrap: break-word;
+  text-align: center;
+  font-weight: 900;
+}
+.skills .skill .skill-box:hover .inner {
+  opacity: 1;
+}
+
+#proj .projects {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto 35px auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 15px;
+}
+#proj .projects .project {
+  position: relative;
+  z-index: 1;
+  width: 33.3%;
+  height: 265px;
+  margin: 0 -2px 0 0;
+}
+#proj .projects .project .proj-img {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: left !important;
+}
+#proj .projects .project .proj-img img {
+  width: 100%;
+  height: auto;
+}
+
+.project .proj-plate {
+  background: rgba(255, 255, 255, 0);
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+.project .proj-plate span {
+  display: block;
+}
+.project .proj-plate img {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 35px;
+}
+.project .proj-plate .proj-name {
+  font: 500 25px/30px "Aleo";
+  margin: 0 100px 0 0;
+  opacity: 0;
+}
+.project .proj-plate .proj-ind {
+  font: 600 15px/30px "Aleo";
+  margin: 0 100px 15px 0;
+  opacity: 0;
+}
+.project:hover .proj-plate {
+  background: linear-gradient(rgba(255, 255, 255, 0.9), white);
+  opacity: 1;
+}
+.project:hover .proj-plate .proj-name {
+  margin: 0 0 0 0;
+  opacity: 1;
+}
+.project:hover .proj-plate .proj-ind {
+  margin: 0 0 15px 0;
+  opacity: 1;
+}
+.project:hover .proj-plate .proj-whereto {
+  margin: 0 0 0 0;
+  opacity: 1;
+}
+
+a.proj-whereto {
+  font: 500 15px/110% "Aleo";
+  text-decoration: none;
+  background: rgba(255, 165, 0, 0.55);
+  border: 1px solid orange;
+  color: #fff;
+  text-align: center;
+  width: 35%;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0 0 0 100px;
+  opacity: 0;
+}
+a.proj-whereto:hover {
+  background: white;
+  color: orange;
+  border: 1px solid orange;
+}
+
+span.status {
+  font: 600 12px/15px "Aleo";
+  opacity: 0;
+  padding: 11px 0 0 0;
+  margin: 0 0 0 70px;
+}
+
+#contact {
+  position: relative;
+}
+
+.con-foreword {
+  margin: 0 0 30px 0;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+.con-foreword i {
+  text-align: center;
+  font-size: 80px;
+  margin: 0 0 25px 0;
+}
+.con-foreword p:nth-of-type(1) {
+  font: 700 25px/30px "Aleo";
+  text-align: center;
+}
+.con-foreword p:nth-of-type(2) {
+  font: 700 15px/30px "Aleo";
+  text-align: center;
+}
+
+.contacts {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 10px auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact {
+  width: 75px;
+  height: 75px;
+  border-radius: 10px;
+  border: 2px solid orange;
+  background: rgba(255, 165, 0, 0);
+  margin: 0 15px 15px 15px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  cursor: pointer;
+}
+.contact:hover {
+  background: orange;
+}
+.contact i {
+  font-size: 50px;
+}
+
+.footer-copyright .footer-wrap {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 35px;
+  background: #2c3e50;
+}
+.footer-copyright .footer-wrap span {
+  font: 400 12px/15px "Aleo";
+  color: orange;
+}
+
+@media only screen and (max-width: 1165px) {
+  #proj .projects {
+    justify-content: center;
+  }
+  #proj .projects .project {
+    width: 50%;
+    max-width: 369px;
+  }
+
+  .project .proj-plate .proj-name {
+    font: 500 20px/30px "Aleo";
+  }
+  .project .proj-plate .proj-ind {
+    font: 600 10px/30px "Aleo";
+  }
+  .project .proj-plate img {
+    margin-bottom: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .hrclass {
+    margin: 25px auto 50px auto;
+  }
+
+  h1.mainh1class {
+    justify-content: center;
+  }
+
+  #proj .projects .project {
+    height: unset;
+    padding: 18% 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #proj .projects .project {
+    width: 100%;
+    max-width: 369px;
+    height: 220px;
+    padding: unset;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .skills .skill {
+    width: 150px;
+    height: 150px;
+  }
+
+  #about p.about-foreword {
+    font: 400 30px/120% "Aleo";
+    margin: 0 0 40px 0;
+  }
+
+  .con-foreword p:nth-of-type(1) {
+    font: 700 16px/30px "Aleo";
+  }
+}
+/*ANIMATIONS*/
+[data-an=left] {
+  position: relative;
+  right: 200px;
+  opacity: 0;
+}
+
+[data-an=right] {
+  position: relative;
+  left: 200px;
+  opacity: 0;
+}
+
+[data-an=top] {
+  position: relative;
+  bottom: 200px;
+  opacity: 0;
+}
+
+[data-an=bottom] {
+  position: relative;
+  top: 200px;
+  opacity: 0;
+}
+
+@keyframes slideFromLeft {
+  from {
+    right: 200px;
+    opacity: 0;
+  }
+  to {
+    right: 0px;
+    opacity: 1;
+  }
+}
+@keyframes slideFromRight {
+  from {
+    left: 200px;
+    opacity: 0;
+  }
+  to {
+    left: 0px;
+    opacity: 1;
+  }
+}
+@keyframes slideFromBottom {
+  from {
+    top: 200px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
+/* Navigation */
+.navi-up {
+  animation: navigationUp 0.75s ease both;
+}
+
+.navi-down {
+  animation: navigationDown 0.75s ease both;
+}
+
+.skill-in {
+  animation: skillmousein 0.35s ease both;
+}
+
+.skill-out {
+  animation: skillmouseout 0.35s ease both;
+}
+
+.slideleft {
+  animation: slideFromLeft 1.2s ease both;
+}
+
+.slideright {
+  animation: slideFromRight 1.2s ease both;
+}
+
+.slidetop {
+  animation: slideFromTop 1.2s ease both;
+}
+
+.slidebottom {
+  animation: slideFromBottom 1.2s ease both;
+}
+
+@keyframes navigationDown {
+  from {
+    top: -50px;
+  }
+  to {
+    top: 0;
+  }
+}
+@keyframes navigationUp {
+  from {
+    top: 0;
+  }
+  to {
+    top: -50px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
