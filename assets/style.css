@@ -237,7 +237,7 @@ span {
   margin: 0;
   text-align: center;
   box-sizing: border-box;
-  animation: slide 20s linear infinite;
+  animation: slide 8s linear infinite;
 }
 
 h1.mainh1class {
@@ -309,7 +309,7 @@ img.home-center-img {
 
 .techno {
   width: 100%;
-  max-width: 888px;
+  max-width: 700px;
   margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
@@ -320,7 +320,7 @@ img.home-center-img {
   margin: 0 15px 25px 15px;
   height: 100px;
   width: 100px;
-  font-size: 40px;
+  font-size: 50px;
   text-align: center;
   position: relative;
   display: inline-block;
@@ -332,23 +332,22 @@ img.home-center-img {
   width: calc(100% * 0.57735);
   display: inline-block;
 }
-.techno .techspec .hexa i {
-  position: absolute;
-  top: 29px;
-  left: 0;
-  right: 0;
-  z-index: 2;
-}
+.techno .techspec .hexa i,
 .techno .techspec .hexa .hexa-img-holder {
   position: absolute;
   z-index: 2;
-  top: 29px;
+  top: 0;
   left: 0;
-  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .techno .techspec .hexa img {
-  height: 40px;
-  width: 40px;
+  height: auto;
+  width: 100%;
+  max-width: 50px;
 }
 .techno .techspec .hexa:before {
   position: absolute;
@@ -695,6 +694,15 @@ span.status {
   position: relative;
   top: 200px;
   opacity: 0;
+}
+
+@keyframes slide {
+	from {
+        background-position: 0 0;
+	}
+	to {
+		background-position: -400px 0;
+	}
 }
 
 @keyframes slideFromLeft {
