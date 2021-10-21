@@ -599,7 +599,9 @@ span.status {
 .contact i {
   font-size: 50px;
 }
-
+footer {
+  position: relative;
+}
 .footer-copyright .footer-wrap {
   position: absolute;
   width: 100%;
